@@ -1,9 +1,15 @@
 import os
 
 
-# Variáveis Globais com dados do Carlos e do Kevin já salvos para o teste
-Usuários = [{"username": "carlos", "nome": "Carlos"}, {"username": "kevin", "nome": "Kevin"}]
-Livros = [{"codigo": "1", "nome": "O Alquimista", "qtd": 1}], [{"codigo": "2", "nome": "Pequeno Principe", "qtd": 2}]
+# Variáveis Globais com novos valores e quantidades aleatórias
+Usuários = [{"username": "kevin", "nome": "Kevin"}, {"username": "diego", "nome": "Diego"}, {"username": "cristney", "nome": "Cristney"}, {"username": "robert", "nome": "Robert"}, {"username": "carlos", "nome": "Carlos"}, {"username": "miguel r", "nome": "Miguel R"}]
+Livros = [
+   {"codigo": "1", "nome": "Da Terra á Lua", "qtd": 14}, 
+   {"codigo": "2", "nome": "Pequeno Principe", "qtd": 22}, 
+   {"codigo": "3", "nome": "Os Tres Porquinhos", "qtd": 19},
+   {"codigo": "4", "nome": "Harry Potter e a Pedra Filosofal", "qtd": 14},
+   {"codigo": "5", "nome": "O Senhor dos Aneis", "qtd": 26}
+]
 Empréstimos = []
 
 
@@ -15,7 +21,7 @@ while True:
 
 
    if opcao == "0": 
-      print("Saindo do sistema... Valeu!")
+      print("Saindo do sistema... Até mais!")
       break
 
 
@@ -30,7 +36,7 @@ while True:
             for u in Usuários:
                if u['username'] == user: existe = True
             
-            if existe: 
+            if existe:
                print("Erro: Username já existe!")
             else: 
                Usuários.append({"username": user, "nome": input("Nome: ")})
@@ -38,8 +44,7 @@ while True:
       elif acao == "2":
             for u in Usuários: print(f" Username: {u['username']} | Nome: {u['nome']}")
       elif acao == "3":
-            user = input
-            input("Username para remover: ")
+            user = input("Username para remover: ")
             Usuários = [u for u in Usuários if u['username'] != user]
 
    # MENU 2: PRODUTOS
@@ -59,8 +64,7 @@ while True:
                Livros.append({"codigo": cod, "nome": input("Nome do Livro: "), "qtd": int(input("Qtd: "))})
                print("Livro Cadastrado!")
       elif acao == "2":
-            for l in Livros: print(f" Código: {1['codigo']} | Livro: {l['nome']} | Estoque: {l['qtd']}")
-            for 2 in Livros: print(f" Código: {2['codigo']} | Livro: {2['nome']} | Estoque: {2['qtd']}") Livros = ([{...}]), ([{...}]), 2 = [{'codigo': '2', 'nome': 'Pequeno Principe', 'qtd': 2}]
+            for l in Livros: print(f" Código: {l['codigo']} | Livro: {l['nome']} | Estoque: {l['qtd']}")
       elif acao == "3":
             cod = input("Código para remover: ")
             Livros = [l for l in Livros if l['codigo'] != cod]
@@ -97,5 +101,3 @@ while True:
       print('Opção Inválida...')
       
    input('\nPressione Enter para continuar...')
-
-
