@@ -147,7 +147,13 @@ while True:
             if acao == "4":
                 break
             elif acao == "1":
+                print("\n Lista de Usuários")
+                for u in Usuários:
+                    print(f"Username:{u["username"]} | Nome: {u["nome"]}")
                 user = input("Username: ")
+                print("\n Estoque de Livros")
+                for l in Livros:
+                    print(f"Código: {l["codigo"]} | {l['nome']} | Quantidade: {l["qtd"]} ")
                 cod = input("Código do livro: ")
                 try:
                     qtd = int(input("Quantidade para empréstimo: "))
