@@ -32,8 +32,8 @@ def ShowTitle():
 def ShowMenu(menu):
     if menu == "Principal":
         print("1. Usuários")
-        print("2. Produtos")
-        print("3. Pedidos")
+        print("2. Livros")
+        print("3. Empréstimos")
         print("0. Sair")  
     else:
         print("1. Novo")
